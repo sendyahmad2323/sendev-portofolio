@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}SenDev® — Creative Developer & Digital Craftsman{% endblock %}
+{% block content %}
+<!-- HERO -->
+<section class="hero-section" id="home">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-ambient ambient-purple" aria-hidden="true"></div><div class="hero-ambient ambient-cyan" aria-hidden="true"></div>
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <div class="eyebrow hero-eyebrow fade-up" style="--delay:.08s"><span class="eyebrow-line"></span> <span>PORTFOLIO / <span id="heroYear">2026</span></span> <span class="eyebrow-star">✳</span> <span>{{ profile.role|upper }}</span></div>
+      <div class="hero-overline fade-up" style="--delay:.15s"><span class="waving-hand">✌</span> Hi there, I'm <strong>{{ profile.name }}</strong></div>
+      <h1 class="hero-title fade-up" style="--delay:.23s"><span class="title-line">CODE THAT</span><span class="title-line">FEELS <span class="title-em">ALIVE<span class="title-period">.</span></span></span></h1>
+      <p class="hero-intro fade-up" style="--delay:.33s">{{ profile.tagline }}</p>
+      <div class="hero-buttons fade-up" style="--delay:.42s"><a class="btn btn-gradient magnetic" href="#projects"><span>Explore my work</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></a><a class="btn btn-outline magnetic" href="#contact">Let's connect <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+      <div class="hero-subfooter fade-up" style="--delay:.55s"><span class="availability-dot"></span>{% if profile.available_for_work %}Open for collaboration{% else %}Currently focused on projects{% endif %}<span class="hero-subdivider"></span><svg class="icon"><use href="#i-map"/></svg> {{ profile.location }}</div>
+    </div>
+    <div class="hero-visual fade-up" style="--delay:.4s" aria-label="Visual identitas SenDev">
+      <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><div class="orbit orbit-three" aria-hidden="true"></div>
+      <div class="hero-aura" aria-hidden="true"></div>
+      <div class="hero-portrait-wrap" data-tilt>
+        <div class="portrait-topline"><span class="tiny-dot"></span><span>DESIGN × DEVELOPMENT</span><span>✳</span></div>
+        <div class="portrait-core">
+          {% if profile.avatar %}<img src="{{ profile.avatar }}" class="portrait-upload" alt="Foto {{ profile.name }}" fetchpriority="high">{% else %}
+          <div class="portrait-monogram" aria-label="Logo SenDev"><span>S</span><span class="mono-slash">/</span><span>D</span></div>
+          <div class="portrait-coordinate">37° / CREATIVE MODE</div>{% endif %}
+        </div>
+        <div class="portrait-bottom"><div><span class="portrait-label">CURRENT STATUS</span><strong>Making ideas real<span class="blink">_</span></strong></div><div class="portrait-index">001 — 026</div></div>
+      </div>
+      <div class="floating-chip floating-chip-top"><span class="chip-bloom">✺</span><span>CREATIVE<br><strong>DEVELOPER</strong></span></div>
+      <div class="floating-chip floating-chip-bottom"><svg class="icon"><use href="#i-terminal"/></svg><span>console.log(<b>'hello world!'</b>)</span><span class="chip-cursor">_</span></div>
+      <span class="star-sparkle spark-one">✳</span><span class="star-sparkle spark-two">✴</span>
+    </div>
+  </div>
+  <div class="hero-bottom container"><a class="scroll-cue" href="#about"><span class="scroll-wheel"><span></span></span> SCROLL TO EXPLORE</a><span class="hero-coordinates">DESIGN / CODE / INTERACT <span>↘</span></span></div>
+</section>
+
+<div class="ticker" aria-label="Bidang keahlian"><div class="ticker-track" aria-hidden="true"><span>CREATIVE DEVELOPMENT</span><b>✳</b><span>FULL-STACK ENGINEERING</span><b>✳</b><span>INTERACTIVE EXPERIENCES</span><b>✳</b><span>USER-CENTERED DESIGN</span><b>✳</b><span>CREATIVE DEVELOPMENT</span><b>✳</b><span>FULL-STACK ENGINEERING</span><b>✳</b><span>INTERACTIVE EXPERIENCES</span><b>✳</b><span>USER-CENTERED DESIGN</span><b>✳</b></div></div>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">01 /</span> THE PERSON BEHIND THE CODE</div><span class="small-plus">✳</span></div>
+    <div class="about-layout">
+      <div class="about-text"><h2 class="section-display reveal">More than <span class="text-muted">just</span><br><span class="outlined-word">a developer.</span></h2><div class="about-description reveal"><p>{{ profile.about }}</p><p>Fokus saya bukan cuma membuat sesuatu <em>berjalan</em>, tetapi membuatnya terasa <strong>memorable</strong> — lewat detail, gerakan yang tepat, dan solusi yang benar-benar berguna.</p></div><a href="#contact" class="text-link reveal">Let's build something together <svg class="icon"><use href="#i-arrow-up-right"/></svg></a>{% if profile.resume %}<a href="{{ profile.resume }}" target="_blank" rel="noopener noreferrer" class="text-link resume-link reveal"><svg class="icon"><use href="#i-file"/></svg> View my CV</a>{% endif %}</div>
+      <div class="about-side reveal">
+        {% if profile.about_photo %}<div class="about-photo-frame" data-tilt><img src="{{ profile.about_photo }}" alt="Dokumentasi {{ profile.name }}" loading="lazy"></div>{% else %}
+        <div class="about-code-card" data-tilt><div class="code-card-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>about_me.py</span><span>↗</span></div><div class="code-card-lines"><span class="line-num">01</span><span><i class="syntax-purple">class</i> <i class="syntax-cyan">Developer</i>:</span><span class="line-num">02</span><span> &nbsp; name = <i class="syntax-lime">"{{ profile.name }}"</i></span><span class="line-num">03</span><span> &nbsp; passion = [</span><span class="line-num">04</span><span> &nbsp;&nbsp; <i class="syntax-pink">"clean code"</i>,</span><span class="line-num">05</span><span> &nbsp;&nbsp; <i class="syntax-pink">"bold design"</i>,</span><span class="line-num">06</span><span> &nbsp;&nbsp; <i class="syntax-pink">"real impact"</i></span><span class="line-num">07</span><span> &nbsp; ]</span><span class="line-num">08</span><span> &nbsp; status = <i class="syntax-lime">"building"</i><b class="blink">▌</b></span></div><div class="code-card-footer"><span><span class="dot-live"></span> All systems operational</span><span>PYTHON 3.x</span></div></div>{% endif %}
+        <div class="about-mini-stats"><div><strong>{{ "%02d"|format(project_count) }}</strong><span>SHOWCASED<br>PROJECTS</span></div><div class="stat-divider"></div><div><strong>∞</strong><span>IDEAS TO<br>EXPLORE</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="section expertise-section" id="expertise"><div class="container">
+  <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">02 /</span> WHAT I BRING TO THE TABLE</div><span class="small-plus">✳</span></div>
+  <div class="section-intro-row reveal"><h2 class="section-display">My digital<br><span class="gradient-italic">toolbox.</span></h2><p>Perpaduan teknologi, rasa ingin tahu, dan perhatian terhadap detail. Semua untuk mengubah masalah menjadi pengalaman digital yang kuat.</p></div>
+  <div class="expertise-grid">
+    {% for group in skill_groups %}<article class="expertise-card reveal spotlight-card" data-tilt><div class="expertise-card-top"><span class="expertise-index">{{ group.number }} / 04</span><svg class="icon expertise-arrow"><use href="#i-arrow-up-right"/></svg></div><div class="expertise-symbol">{% if group.name == 'Frontend' %}✳{% elif group.name == 'Backend' %}⌘{% elif group.name == 'Mobile' %}◈{% else %}⟡{% endif %}</div><div class="expertise-info"><h3>{{ group.name }}</h3><p>{{ group.caption }}</p><div class="skill-tags">{% for skill in group['items'] %}<span>{{ skill }}</span>{% endfor %}</div></div></article>{% endfor %}
+  </div>
+  <div class="expertise-bottom reveal"><div class="stack-note"><svg class="icon"><use href="#i-lightning"/></svg> ALWAYS LEARNING. ALWAYS SHIPPING.</div><span>↗ ENDLESS POSSIBILITIES</span></div>
+</div></section>
+
+<!-- PROJECTS -->
+<section class="section projects-section" id="projects"><div class="container">
+  <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">03 /</span> A SELECTION OF MY WORK</div><span class="small-plus">✳</span></div>
+  <div class="section-intro-row projects-intro reveal"><h2 class="section-display">Selected<br><span class="gradient-italic">work.</span><span class="title-small-index">(0{{ project_count }})</span></h2><div class="project-intro-right"><p>Dari ide menjadi produk nyata. Setiap proyek punya tantangan, cerita, dan solusi yang berbeda.</p><div class="project-filters" role="group" aria-label="Filter proyek"><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All <span>↗</span></button><button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button><button type="button" class="filter-btn" data-filter="backend" aria-pressed="false">Backend</button><button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button></div></div></div>
+  <div class="project-grid" id="projectGrid">
+    {% for project in projects %}<article class="project-card reveal" data-category="{{ project.category }}"><div class="project-visual variant-{{ project.variant }}" data-tilt>
+      {% if project.image %}<img class="project-upload" src="{{ project.image }}" alt="Tampilan proyek {{ project.title }}" loading="lazy">{% else %}
+      <div class="project-art-grid" aria-hidden="true"></div><div class="project-browser" aria-hidden="true"><div class="project-browser-top"><div class="window-dots"><i></i><i></i><i></i></div><span>SenDev / {{ project.category_label }}</span><span>↗</span></div>
+      {% if project.variant == 'decision' %}<div class="mock-dashboard"><div class="mock-sidebar"><i></i><i></i><i></i><i></i><i></i></div><div class="mock-main"><div class="mock-h1"></div><div class="mock-tiles"><i></i><i></i><i></i></div><div class="mock-chart"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><div class="mock-footer-bars"><span></span><span></span></div></div></div>
+      {% elif project.variant == 'blog' %}<div class="mock-blog"><div class="mock-blog-title">WORDS<br><em>MATTER.</em></div><div class="mock-blog-posts"><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div></div></div>
+      {% elif project.variant == 'ppid' %}<div class="mock-ppid"><div class="mock-gold-banner"><small>INFORMATION FOR EVERYONE</small><b>PUBLIC<br>SERVICE.</b><i></i></div><div class="mock-ppid-cards"><span></span><span></span><span></span></div></div>
+      {% else %}<div class="mock-mobile"><div class="mock-phone"><div class="phone-notch"></div><div class="phone-crescent">☾</div><div class="phone-calligraphy">السلام عليكم</div><div class="phone-caption">A moment for mindfulness</div><div class="phone-menu"><i></i><i></i><i></i></div></div><div class="phone-orbit"></div></div>{% endif %}
+      </div>{% endif %}
+      <span class="project-number">{{ project.number }} / 0{{ project_count }}</span><div class="project-hover-cta"><svg class="icon"><use href="#i-arrow-up-right"/></svg></div></div>
+      <div class="project-card-content"><div class="project-meta"><span>{{ project.category_label }}</span><span class="project-meta-line"></span><span>FEATURED WORK</span></div><div class="project-heading-row"><h3>{{ project.title }}</h3>{% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="Lihat {{ project.title }} di GitHub"><svg class="icon"><use href="#i-arrow-up-right"/></svg></a>{% elif project.live %}<a href="{{ project.live }}" target="_blank" rel="noopener noreferrer" aria-label="Buka {{ project.title }}"><svg class="icon"><use href="#i-arrow-up-right"/></svg></a>{% endif %}</div><p>{{ project.description }}</p><div class="project-bottom-row"><div class="project-tags">{% for tag in project.tech %}<span>{{ tag }}</span>{% endfor %}</div><div class="project-action-links">{% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> Code</a>{% endif %}{% if project.live %}<a href="{{ project.live }}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-external"/></svg> Live</a>{% endif %}</div></div></div>
+    </article>{% endfor %}
+  </div><div class="project-empty" id="projectEmpty" hidden>Tidak ada proyek di kategori ini. Pilih filter lainnya.</div>
+  {% if profile.github_url %}<a href="{{ profile.github_url }}" class="all-projects-link reveal" target="_blank" rel="noopener noreferrer"><span>More on GitHub</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></a>{% endif %}
+</div></section>
+
+<!-- WAY OF WORKING -->
+<section class="statement-section"><div class="container"><div class="statement-layout"><span class="statement-label reveal">THE SENDEV MINDSET <span>✳</span></span><h2 class="statement-text reveal">GOOD CODE IS<br><span class="statement-white">FUNCTIONAL.</span><br><span class="statement-outline">GREAT CODE</span><br>IS <span class="statement-gradient">FELT.</span></h2><div class="statement-note reveal"><svg class="icon"><use href="#i-sparkles"/></svg><span>Every pixel has a purpose.<br>Every interaction tells a story.</span></div></div></div></section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery"><div class="container">
+  <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">04 /</span> THE STORY BEYOND THE SCREEN</div><span class="small-plus">✳</span></div>
+  <div class="section-intro-row reveal"><h2 class="section-display">Beyond<br><span class="gradient-italic">the code.</span></h2><p>Belajar, berkolaborasi, dan terus berkembang. Ruang untuk perjalanan, pencapaian, dan momen di luar layar.</p></div>
+  <div class="gallery-head reveal"><div><span class="gallery-asterisk">✳</span><h3>Certificates <span>& achievements</span></h3></div><span class="gallery-counter">/ 01</span></div>
+  <div class="gallery-grid certificates-grid">
+    {% if certificates %}{% for certificate in certificates %}<article class="gallery-card certificate-card reveal"><button type="button" class="gallery-image-button" data-lightbox="{{ certificate.image }}" data-caption="{{ certificate.title }} — {{ certificate.issuer }}" aria-label="Lihat sertifikat {{ certificate.title }}"><img src="{{ certificate.image }}" alt="Sertifikat {{ certificate.title }}" loading="lazy"><span class="gallery-open"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></button><div class="gallery-info"><div><h4>{{ certificate.title }}</h4><p>{{ certificate.issuer }}</p></div>{% if certificate.url %}<a href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="Verifikasi {{ certificate.title }}"><svg class="icon"><use href="#i-external"/></svg></a>{% endif %}</div></article>{% endfor %}
+    {% else %}{% for slot in certificate_slots %}<article class="gallery-card certificate-card placeholder-card reveal"><div class="gallery-placeholder certificate-placeholder" aria-label="Tempat unggah {{ slot }}"><div class="certificate-stamp">✺</div><div class="certificate-lines"><i></i><i></i><i></i></div><div class="certificate-badge">CERTIFIED<br>EXCELLENCE</div><div class="placeholder-corner">0{{ loop.index }}</div></div><div class="gallery-info"><div><h4>{{ slot }}</h4><p>Tempat untuk sertifikat yang akan diunggah</p></div><span class="placeholder-pulse">●</span></div></article>{% endfor %}{% endif %}
+  </div>
+  <div class="gallery-head gallery-head-activity reveal"><div><span class="gallery-asterisk">✳</span><h3>Activities <span>& moments</span></h3></div><span class="gallery-counter">/ 02</span></div>
+  <div class="gallery-grid activities-grid">
+    {% if activities %}{% for activity in activities %}<article class="gallery-card activity-card reveal"><button type="button" class="gallery-image-button" data-lightbox="{{ activity.image }}" data-caption="{{ activity.title }}" aria-label="Lihat kegiatan {{ activity.title }}"><img src="{{ activity.image }}" alt="Dokumentasi {{ activity.title }}" loading="lazy"><span class="gallery-open"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></button><div class="gallery-info"><div><span class="gallery-category">{{ activity.category }}</span><h4>{{ activity.title }}</h4><p>{{ activity.description }}</p></div></div></article>{% endfor %}
+    {% else %}{% for slot in activity_slots %}<article class="gallery-card activity-card placeholder-card reveal"><div class="gallery-placeholder activity-placeholder activity-placeholder-{{ loop.index }}"><div class="activity-shape shape-one"></div><div class="activity-shape shape-two"></div><span class="activity-placeholder-mark">0{{ loop.index }}<small>CAPTURE THE MOMENT</small></span></div><div class="gallery-info"><div><span class="gallery-category">DOCUMENTATION / UPCOMING</span><h4>{{ slot }}</h4><p>Foto kegiatan, komunitas, workshop, atau event.</p></div></div></article>{% endfor %}{% endif %}
+  </div>
+  <p class="gallery-note reveal"><svg class="icon"><use href="#i-image"/></svg> Galeri disiapkan untuk foto asli. Sertifikat dan kegiatan dapat diunggah melalui dashboard admin Django.</p>
+</div></section>
+
+<!-- JOURNEY -->
+<section class="section journey-section" id="journey"><div class="container"><div class="section-heading reveal"><div class="section-kicker"><span class="section-num">05 /</span> HOW I KEEP MOVING FORWARD</div><span class="small-plus">✳</span></div><div class="journey-layout"><div><h2 class="section-display reveal">Driven by<br><span class="gradient-italic">curiosity.</span></h2><p class="journey-intro reveal">Bagi saya, menjadi developer berarti terus bereksperimen, tidak berhenti belajar, dan berani membuat sesuatu yang berbeda.</p></div><div class="journey-list">
+  {% if experiences %}{% for experience in experiences %}<div class="journey-row reveal"><span class="journey-icon">✳</span><div><h3>{{ experience.position }}</h3><p>{{ experience.company }} · {{ experience.description }}</p></div><span class="journey-year">{{ experience.start_date }}</span></div>{% endfor %}
+  {% else %}<div class="journey-row reveal"><span class="journey-icon">01</span><div><h3>Curiosity first</h3><p>Selalu ingin memahami cara kerja hal baru, bukan sekadar menyalin solusinya.</p></div><span class="journey-chevron">↗</span></div><div class="journey-row reveal"><span class="journey-icon">02</span><div><h3>Build with intention</h3><p>Setiap fitur punya alasan. Setiap desain punya tujuan.</p></div><span class="journey-chevron">↗</span></div><div class="journey-row reveal"><span class="journey-icon">03</span><div><h3>Keep evolving</h3><p>Belajar dari proyek nyata, memperbaiki detail, lalu melangkah lebih jauh.</p></div><span class="journey-chevron">↗</span></div>{% endif %}
+</div></div></div></section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact"><div class="contact-halo" aria-hidden="true"></div><div class="container"><div class="section-heading reveal"><div class="section-kicker"><span class="section-num">06 /</span> THE NEXT BIG THING STARTS HERE</div><span class="small-plus">✳</span></div><div class="contact-main"><div class="contact-left"><h2 class="contact-title reveal">HAVE AN<br>IDEA? <span class="gradient-italic">LET'S</span><br><span class="contact-outline">MAKE IT</span><br>REAL<span class="title-period">.</span></h2><p class="contact-subtitle reveal">Punya proyek, ide, atau sekadar ingin ngobrol soal teknologi? Saya selalu terbuka untuk percakapan menarik.</p><div class="contact-direct reveal"><a href="mailto:{{ profile.email }}" class="contact-email">{{ profile.email }} <svg class="icon"><use href="#i-arrow-up-right"/></svg></a><button type="button" class="copy-email" data-copy="{{ profile.email }}" aria-label="Salin email"><svg class="icon"><use href="#i-copy"/></svg></button></div><div class="contact-chips reveal"><span><svg class="icon"><use href="#i-map"/></svg> {{ profile.location }}</span><span><i class="dot-live"></i> {% if profile.available_for_work %}Available for projects{% else %}Currently focused{% endif %}</span></div></div>
+      <div class="contact-form-card reveal"><div class="contact-form-top"><div><span class="form-overline">START A CONVERSATION</span><h3>Tell me about it<span> ✳</span></h3></div><span class="form-top-icon"><svg class="icon"><use href="#i-send"/></svg></span></div>
+        {% if messages %}{% for message in messages %}<div class="form-message {% if message.tags == 'success' %}message-success{% else %}message-error{% endif %}" role="status">{{ message }}</div>{% endfor %}{% endif %}
+        <form class="contact-form" action="#contact" method="post" id="contactForm"><input type="hidden" name="csrfmiddlewaretoken" value="demo"><div class="honeypot"><label for="website">Biarkan kolom ini kosong</label><input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></div><div class="form-row"><label for="contactName">01 / YOUR NAME<input id="contactName" name="name" type="text" maxlength="120" minlength="2" autocomplete="name" placeholder="Nama kamu" required></label><label for="contactEmail">02 / EMAIL ADDRESS<input id="contactEmail" name="email" type="email" maxlength="254" autocomplete="email" placeholder="nama@email.com" required></label></div><label for="contactSubject">03 / WHAT'S ON YOUR MIND?<input id="contactSubject" type="text" name="subject" minlength="3" maxlength="160" placeholder="Diskusi proyek / Kolaborasi / Halo!" required></label><label for="contactMessage">04 / YOUR MESSAGE<textarea id="contactMessage" name="message" minlength="10" maxlength="5000" rows="4" placeholder="Ceritakan idemu di sini..." required></textarea></label><button class="btn btn-gradient form-submit magnetic" type="submit"><span>Send message</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></button><p class="form-disclaimer">Pesan akan disimpan di dashboard SenDev. Belum ada email otomatis.</p></form>
+      </div>
+    </div></div></section>
+{% endblock %}

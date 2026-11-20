@@ -1,0 +1,9 @@
+SENDEV — DEMO STATIS
+
+Buka index.html untuk melihat tampilan SenDev dengan empat proyek awal.
+Interaksi navigasi, filter, animasi, galeri, serta command palette berfungsi.
+
+Demi kejelasan: ini hanya demo. Upload foto, Django Admin, dan penyimpanan pesan
+baru aktif ketika kamu menjalankan proyek lengkap dengan Django.
+
+Kembali ke folder portofolio-main lalu ikuti README.md.

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080912">
+  <meta name="description" content="SenDev — Portofolio Sendy Ahmad. Full-Stack Developer yang menggabungkan clean engineering dan visual experience yang berani.">
+  <meta property="og:title" content="SenDev — Creative Developer Portfolio">
+  <meta property="og:description" content="Code that feels alive. Jelajahi karya, skill, sertifikat, dan perjalanan SenDev.">
+  <meta property="og:type" content="website">
+  <title>SenDev® — Creative Developer & Digital Craftsman</title>
+  <link rel="icon" href="static/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/portfolio.css">
+</head>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16m-7-7 7 7 7-7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7h3v1m-3 2a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 17-5-5 5-5m8 0 5 5-5 5m-3-16-2 20"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="m6 8 4 4-4 4m6 0h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 6-10 6L2 9l10-6Zm-10 12 10 6 10-6M2 12l10 6 10-6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v4m6-4v4M9 19v4m6-4v4M19 9h4m-4 6h4M1 9h4m-4 6h4"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 2 2.1 7.9L22 12l-7.9 2.1L12 22l-2.1-7.9L2 12l7.9-2.1L12 2Zm7-1v4m-2-2h4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-7-7Z"/><path d="M13 2v7h7M8 14h8M8 18h6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m22 17-6-6L3 21"/></symbol>
+    <symbol id="i-command" viewBox="0 0 24 24"><path d="M9 7V5a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3v14a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V7Z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7ZM22 2 11 13"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-lightning" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-12h-7l0-8Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a17 17 0 0 1 0 20M12 2a17 17 0 0 0 0 20"/></symbol>
+  </svg>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="site-noise" aria-hidden="true"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-wrap container" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="SenDev, kembali ke beranda"><span class="brand-symbol">S<span class="brand-symbol-dot">.</span></span><span class="brand-text">SenDev<span class="brand-registered">®</span></span></a>
+      <div class="nav-panel" id="navPanel">
+        <a class="nav-link active" href="#home" data-nav="home">Home</a>
+        <a class="nav-link" href="#about" data-nav="about">About</a>
+        <a class="nav-link" href="#expertise" data-nav="expertise">Expertise</a>
+        <a class="nav-link" href="#projects" data-nav="projects">Work</a>
+        <a class="nav-link" href="#gallery" data-nav="gallery">Gallery</a>
+        <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="command-key" type="button" id="openCommand" aria-label="Buka navigasi cepat (Ctrl atau Command K)"><svg class="icon"><use href="#i-search"/></svg><span>⌘ K</span></button>
+        <a class="nav-cta" href="#contact"><span>Let's talk</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Buka menu"><svg class="icon" id="menuIcon"><use href="#i-menu"/></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+<!-- HERO -->
+<section class="hero-section" id="home">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-ambient ambient-purple" aria-hidden="true"></div><div class="hero-ambient ambient-cyan" aria-hidden="true"></div>
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <div class="eyebrow hero-eyebrow fade-up" style="--delay:.08s"><span class="eyebrow-line"></span> <span>PORTFOLIO / <span id="heroYear">2026</span></span> <span class="eyebrow-star">✳</span> <span>FULL-STACK DEVELOPER</span></div>
+      <div class="hero-overline fade-up" style="--delay:.15s"><span class="waving-hand">✌</span> Hi there, I'm <strong>Sendy Ahmad</strong></div>
+      <h1 class="hero-title fade-up" style="--delay:.23s"><span class="title-line">CODE THAT</span><span class="title-line">FEELS <span class="title-em">ALIVE<span class="title-period">.</span></span></span></h1>
+      <p class="hero-intro fade-up" style="--delay:.33s">Saya membangun pengalaman digital yang cepat, interaktif, dan punya karakter.</p>
+      <div class="hero-buttons fade-up" style="--delay:.42s"><a class="btn btn-gradient magnetic" href="#projects"><span>Explore my work</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></a><a class="btn btn-outline magnetic" href="#contact">Let's connect <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+      <div class="hero-subfooter fade-up" style="--delay:.55s"><span class="availability-dot"></span>Open for collaboration<span class="hero-subdivider"></span><svg class="icon"><use href="#i-map"/></svg> Samarinda, Indonesia</div>
+    </div>
+    <div class="hero-visual fade-up" style="--delay:.4s" aria-label="Visual identitas SenDev">
+      <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><div class="orbit orbit-three" aria-hidden="true"></div>
+      <div class="hero-aura" aria-hidden="true"></div>
+      <div class="hero-portrait-wrap" data-tilt>
+        <div class="portrait-topline"><span class="tiny-dot"></span><span>DESIGN × DEVELOPMENT</span><span>✳</span></div>
+        <div class="portrait-core">
+          
+          <div class="portrait-monogram" aria-label="Logo SenDev"><span>S</span><span class="mono-slash">/</span><span>D</span></div>
+          <div class="portrait-coordinate">37° / CREATIVE MODE</div>
+        </div>
+        <div class="portrait-bottom"><div><span class="portrait-label">CURRENT STATUS</span><strong>Making ideas real<span class="blink">_</span></strong></div><div class="portrait-index">001 — 026</div></div>
+      </div>
+      <div class="floating-chip floating-chip-top"><span class="chip-bloom">✺</span><span>CREATIVE<br><strong>DEVELOPER</strong></span></div>
+      <div class="floating-chip floating-chip-bottom"><svg class="icon"><use href="#i-terminal"/></svg><span>console.log(<b>'hello world!'</b>)</span><span class="chip-cursor">_</span></div>
+      <span class="star-sparkle spark-one">✳</span><span class="star-sparkle spark-two">✴</span>
+    </div>
+  </div>
+  <div class="hero-bottom container"><a class="scroll-cue" href="#about"><span class="scroll-wheel"><span></span></span> SCROLL TO EXPLORE</a><span class="hero-coordinates">DESIGN / CODE / INTERACT <span>↘</span></span></div>
+</section>
+
+<div class="ticker" aria-label="Bidang keahlian"><div class="ticker-track" aria-hidden="true"><span>CREATIVE DEVELOPMENT</span><b>✳</b><span>FULL-STACK ENGINEERING</span><b>✳</b><span>INTERACTIVE EXPERIENCES</span><b>✳</b><span>USER-CENTERED DESIGN</span><b>✳</b><span>CREATIVE DEVELOPMENT</span><b>✳</b><span>FULL-STACK ENGINEERING</span><b>✳</b><span>INTERACTIVE EXPERIENCES</span><b>✳</b><span>USER-CENTERED DESIGN</span><b>✳</b></div></div>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">01 /</span> THE PERSON BEHIND THE CODE</div><span class="small-plus">✳</span></div>
+    <div class="about-layout">
+      <div class="about-text"><h2 class="section-display reveal">More than <span class="text-muted">just</span><br><span class="outlined-word">a developer.</span></h2><div class="about-description reveal"><p>Saya adalah developer yang tertarik mengubah ide kompleks menjadi produk digital yang sederhana digunakan, rapi di balik layar, dan berkesan sejak detik pertama.</p><p>Fokus saya bukan cuma membuat sesuatu <em>berjalan</em>, tetapi membuatnya terasa <strong>memorable</strong> — lewat detail, gerakan yang tepat, dan solusi yang benar-benar berguna.</p></div><a href="#contact" class="text-link reveal">Let's build something together <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div>
+      <div class="about-side reveal">
+        
+        <div class="about-code-card" data-tilt><div class="code-card-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>about_me.py</span><span>↗</span></div><div class="code-card-lines"><span class="line-num">01</span><span><i class="syntax-purple">class</i> <i class="syntax-cyan">Developer</i>:</span><span class="line-num">02</span><span> &nbsp; name = <i class="syntax-lime">"Sendy Ahmad"</i></span><span class="line-num">03</span><span> &nbsp; passion = [</span><span class="line-num">04</span><span> &nbsp;&nbsp; <i class="syntax-pink">"clean code"</i>,</span><span class="line-num">05</span><span> &nbsp;&nbsp; <i class="syntax-pink">"bold design"</i>,</span><span class="line-num">06</span><span> &nbsp;&nbsp; <i class="syntax-pink">"real impact"</i></span><span class="line-num">07</span><span> &nbsp; ]</span><span class="line-num">08</span><span> &nbsp; status = <i class="syntax-lime">"building"</i><b class="blink">▌</b></span></div><div class="code-card-footer"><span><span class="dot-live"></span> All systems operational</span><span>PYTHON 3.x</span></div></div>
+        <div class="about-mini-stats"><div><strong>04</strong><span>SHOWCASED<br>PROJECTS</span></div><div class="stat-divider"></div><div><strong>∞</strong><span>IDEAS TO<br>EXPLORE</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="section expertise-section" id="expertise"><div class="container">
+  <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">02 /</span> WHAT I BRING TO THE TABLE</div><span class="small-plus">✳</span></div>
+  <div class="section-intro-row reveal"><h2 class="section-display">My digital<br><span class="gradient-italic">toolbox.</span></h2><p>Perpaduan teknologi, rasa ingin tahu, dan perhatian terhadap detail. Semua untuk mengubah masalah menjadi pengalaman digital yang kuat.</p></div>
+  <div class="expertise-grid">
+    <article class="expertise-card reveal spotlight-card" data-tilt><div class="expertise-card-top"><span class="expertise-index">01 / 04</span><svg class="icon expertise-arrow"><use href="#i-arrow-up-right"/></svg></div><div class="expertise-symbol">✳</div><div class="expertise-info"><h3>Frontend</h3><p>Interfaces people love</p><div class="skill-tags"><span>HTML &amp; CSS</span><span>JavaScript</span><span>React</span><span>Responsive UI</span></div></div></article><article class="expertise-card reveal spotlight-card" data-tilt><div class="expertise-card-top"><span class="expertise-index">02 / 04</span><svg class="icon expertise-arrow"><use href="#i-arrow-up-right"/></svg></div><div class="expertise-symbol">⌘</div><div class="expertise-info"><h3>Backend</h3><p>Logic built to scale</p><div class="skill-tags"><span>Python</span><span>Django</span><span>Laravel</span><span>REST API</span></div></div></article><article class="expertise-card reveal spotlight-card" data-tilt><div class="expertise-card-top"><span class="expertise-index">03 / 04</span><svg class="icon expertise-arrow"><use href="#i-arrow-up-right"/></svg></div><div class="expertise-symbol">◈</div><div class="expertise-info"><h3>Mobile</h3><p>Ideas beyond the browser</p><div class="skill-tags"><span>Kotlin</span><span>Android Studio</span></div></div></article><article class="expertise-card reveal spotlight-card" data-tilt><div class="expertise-card-top"><span class="expertise-index">04 / 04</span><svg class="icon expertise-arrow"><use href="#i-arrow-up-right"/></svg></div><div class="expertise-symbol">⟡</div><div class="expertise-info"><h3>Workflow</h3><p>From concept to shipping</p><div class="skill-tags"><span>Git</span><span>GitHub</span><span>Problem Solving</span></div></div></article>
+  </div>
+  <div class="expertise-bottom reveal"><div class="stack-note"><svg class="icon"><use href="#i-lightning"/></svg> ALWAYS LEARNING. ALWAYS SHIPPING.</div><span>↗ ENDLESS POSSIBILITIES</span></div>
+</div></section>
+
+<!-- PROJECTS -->
+<section class="section projects-section" id="projects"><div class="container">
+  <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">03 /</span> A SELECTION OF MY WORK</div><span class="small-plus">✳</span></div>
+  <div class="section-intro-row projects-intro reveal"><h2 class="section-display">Selected<br><span class="gradient-italic">work.</span><span class="title-small-index">(04)</span></h2><div class="project-intro-right"><p>Dari ide menjadi produk nyata. Setiap proyek punya tantangan, cerita, dan solusi yang berbeda.</p><div class="project-filters" role="group" aria-label="Filter proyek"><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All <span>↗</span></button><button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button><button type="button" class="filter-btn" data-filter="backend" aria-pressed="false">Backend</button><button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button></div></div></div>
+  <div class="project-grid" id="projectGrid">
+    <article class="project-card reveal" data-category="backend"><div class="project-visual variant-decision" data-tilt>
+      
+      <div class="project-art-grid" aria-hidden="true"></div><div class="project-browser" aria-hidden="true"><div class="project-browser-top"><div class="window-dots"><i></i><i></i><i></i></div><span>SenDev / DECISION SUPPORT</span><span>↗</span></div>
+      <div class="mock-dashboard"><div class="mock-sidebar"><i></i><i></i><i></i><i></i><i></i></div><div class="mock-main"><div class="mock-h1"></div><div class="mock-tiles"><i></i><i></i><i></i></div><div class="mock-chart"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><div class="mock-footer-bars"><span></span><span></span></div></div></div>
+      
+      </div>
+      <span class="project-number">01 / 04</span><div class="project-hover-cta"><svg class="icon"><use href="#i-arrow-up-right"/></svg></div></div>
+      <div class="project-card-content"><div class="project-meta"><span>DECISION SUPPORT</span><span class="project-meta-line"></span><span>FEATURED WORK</span></div><div class="project-heading-row"><h3>Framework Decision Support System</h3><a href="https://github.com/sendyahmad2323/saw_spk" target="_blank" rel="noopener noreferrer" aria-label="Lihat Framework Decision Support System di GitHub"><svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div><p>Sistem pendukung keputusan pemilihan framework terbaik dengan metode Simple Additive Weighting (SAW).</p><div class="project-bottom-row"><div class="project-tags"><span>Python</span><span>Django</span><span>SAW</span></div><div class="project-action-links"><a href="https://github.com/sendyahmad2323/saw_spk" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> Code</a></div></div></div>
+    </article><article class="project-card reveal" data-category="web"><div class="project-visual variant-blog" data-tilt>
+      
+      <div class="project-art-grid" aria-hidden="true"></div><div class="project-browser" aria-hidden="true"><div class="project-browser-top"><div class="window-dots"><i></i><i></i><i></i></div><span>SenDev / WEB APPLICATION</span><span>↗</span></div>
+      <div class="mock-blog"><div class="mock-blog-title">WORDS<br><em>MATTER.</em></div><div class="mock-blog-posts"><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div></div></div>
+      
+      </div>
+      <span class="project-number">02 / 04</span><div class="project-hover-cta"><svg class="icon"><use href="#i-arrow-up-right"/></svg></div></div>
+      <div class="project-card-content"><div class="project-meta"><span>WEB APPLICATION</span><span class="project-meta-line"></span><span>FEATURED WORK</span></div><div class="project-heading-row"><h3>Blogging Platform with Django</h3><a href="https://github.com/sendyahmad2323/Blogging-Django" target="_blank" rel="noopener noreferrer" aria-label="Lihat Blogging Platform with Django di GitHub"><svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div><p>Platform blogging dengan struktur backend Django dan pengalaman membaca yang lebih terorganisasi.</p><div class="project-bottom-row"><div class="project-tags"><span>Django</span><span>Python</span><span>HTML/CSS</span></div><div class="project-action-links"><a href="https://github.com/sendyahmad2323/Blogging-Django" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> Code</a></div></div></div>
+    </article><article class="project-card reveal" data-category="web"><div class="project-visual variant-ppid" data-tilt>
+      
+      <div class="project-art-grid" aria-hidden="true"></div><div class="project-browser" aria-hidden="true"><div class="project-browser-top"><div class="window-dots"><i></i><i></i><i></i></div><span>SenDev / PUBLIC SERVICE</span><span>↗</span></div>
+      <div class="mock-ppid"><div class="mock-gold-banner"><small>INFORMATION FOR EVERYONE</small><b>PUBLIC<br>SERVICE.</b><i></i></div><div class="mock-ppid-cards"><span></span><span></span><span></span></div></div>
+      
+      </div>
+      <span class="project-number">03 / 04</span><div class="project-hover-cta"><svg class="icon"><use href="#i-arrow-up-right"/></svg></div></div>
+      <div class="project-card-content"><div class="project-meta"><span>PUBLIC SERVICE</span><span class="project-meta-line"></span><span>FEATURED WORK</span></div><div class="project-heading-row"><h3>PPID BAZNAS Kalimantan Timur</h3><a href="https://github.com/Sheyon565/ppid-baznas-kaltim" target="_blank" rel="noopener noreferrer" aria-label="Lihat PPID BAZNAS Kalimantan Timur di GitHub"><svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div><p>Website layanan informasi publik untuk mendukung akses informasi dan layanan digital.</p><div class="project-bottom-row"><div class="project-tags"><span>Web</span><span>Public Service</span><span>UI</span></div><div class="project-action-links"><a href="https://github.com/Sheyon565/ppid-baznas-kaltim" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> Code</a></div></div></div>
+    </article><article class="project-card reveal" data-category="mobile"><div class="project-visual variant-mobile" data-tilt>
+      
+      <div class="project-art-grid" aria-hidden="true"></div><div class="project-browser" aria-hidden="true"><div class="project-browser-top"><div class="window-dots"><i></i><i></i><i></i></div><span>SenDev / ANDROID APPLICATION</span><span>↗</span></div>
+      <div class="mock-mobile"><div class="mock-phone"><div class="phone-notch"></div><div class="phone-crescent">☾</div><div class="phone-calligraphy">السلام عليكم</div><div class="phone-caption">A moment for mindfulness</div><div class="phone-menu"><i></i><i></i><i></i></div></div><div class="phone-orbit"></div></div>
+      </div>
+      <span class="project-number">04 / 04</span><div class="project-hover-cta"><svg class="icon"><use href="#i-arrow-up-right"/></svg></div></div>
+      <div class="project-card-content"><div class="project-meta"><span>ANDROID APPLICATION</span><span class="project-meta-line"></span><span>FEATURED WORK</span></div><div class="project-heading-row"><h3>Islamic Android Application</h3><a href="https://github.com/sendyahmad2323/islamic" target="_blank" rel="noopener noreferrer" aria-label="Lihat Islamic Android Application di GitHub"><svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div><p>Aplikasi Android bertema Islami yang dikembangkan menggunakan Kotlin dan Android Studio.</p><div class="project-bottom-row"><div class="project-tags"><span>Kotlin</span><span>Android Studio</span><span>Mobile</span></div><div class="project-action-links"><a href="https://github.com/sendyahmad2323/islamic" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> Code</a></div></div></div>
+    </article>
+  </div><div class="project-empty" id="projectEmpty" hidden>Tidak ada proyek di kategori ini. Pilih filter lainnya.</div>
+  <a href="https://github.com/sendyahmad2323" class="all-projects-link reveal" target="_blank" rel="noopener noreferrer"><span>More on GitHub</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+</div></section>
+
+<!-- WAY OF WORKING -->
+<section class="statement-section"><div class="container"><div class="statement-layout"><span class="statement-label reveal">THE SENDEV MINDSET <span>✳</span></span><h2 class="statement-text reveal">GOOD CODE IS<br><span class="statement-white">FUNCTIONAL.</span><br><span class="statement-outline">GREAT CODE</span><br>IS <span class="statement-gradient">FELT.</span></h2><div class="statement-note reveal"><svg class="icon"><use href="#i-sparkles"/></svg><span>Every pixel has a purpose.<br>Every interaction tells a story.</span></div></div></div></section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery"><div class="container">
+  <div class="section-heading reveal"><div class="section-kicker"><span class="section-num">04 /</span> THE STORY BEYOND THE SCREEN</div><span class="small-plus">✳</span></div>
+  <div class="section-intro-row reveal"><h2 class="section-display">Beyond<br><span class="gradient-italic">the code.</span></h2><p>Belajar, berkolaborasi, dan terus berkembang. Ruang untuk perjalanan, pencapaian, dan momen di luar layar.</p></div>
+  <div class="gallery-head reveal"><div><span class="gallery-asterisk">✳</span><h3>Certificates <span>& achievements</span></h3></div><span class="gallery-counter">/ 01</span></div>
+  <div class="gallery-grid certificates-grid">
+    <article class="gallery-card certificate-card placeholder-card reveal"><div class="gallery-placeholder certificate-placeholder" aria-label="Tempat unggah Sertifikat 01"><div class="certificate-stamp">✺</div><div class="certificate-lines"><i></i><i></i><i></i></div><div class="certificate-badge">CERTIFIED<br>EXCELLENCE</div><div class="placeholder-corner">01</div></div><div class="gallery-info"><div><h4>Sertifikat 01</h4><p>Tempat untuk sertifikat yang akan diunggah</p></div><span class="placeholder-pulse">●</span></div></article><article class="gallery-card certificate-card placeholder-card reveal"><div class="gallery-placeholder certificate-placeholder" aria-label="Tempat unggah Sertifikat 02"><div class="certificate-stamp">✺</div><div class="certificate-lines"><i></i><i></i><i></i></div><div class="certificate-badge">CERTIFIED<br>EXCELLENCE</div><div class="placeholder-corner">02</div></div><div class="gallery-info"><div><h4>Sertifikat 02</h4><p>Tempat untuk sertifikat yang akan diunggah</p></div><span class="placeholder-pulse">●</span></div></article><article class="gallery-card certificate-card placeholder-card reveal"><div class="gallery-placeholder certificate-placeholder" aria-label="Tempat unggah Sertifikat 03"><div class="certificate-stamp">✺</div><div class="certificate-lines"><i></i><i></i><i></i></div><div class="certificate-badge">CERTIFIED<br>EXCELLENCE</div><div class="placeholder-corner">03</div></div><div class="gallery-info"><div><h4>Sertifikat 03</h4><p>Tempat untuk sertifikat yang akan diunggah</p></div><span class="placeholder-pulse">●</span></div></article>
+  </div>
+  <div class="gallery-head gallery-head-activity reveal"><div><span class="gallery-asterisk">✳</span><h3>Activities <span>& moments</span></h3></div><span class="gallery-counter">/ 02</span></div>
+  <div class="gallery-grid activities-grid">
+    <article class="gallery-card activity-card placeholder-card reveal"><div class="gallery-placeholder activity-placeholder activity-placeholder-1"><div class="activity-shape shape-one"></div><div class="activity-shape shape-two"></div><span class="activity-placeholder-mark">01<small>CAPTURE THE MOMENT</small></span></div><div class="gallery-info"><div><span class="gallery-category">DOCUMENTATION / UPCOMING</span><h4>Kegiatan 01</h4><p>Foto kegiatan, komunitas, workshop, atau event.</p></div></div></article><article class="gallery-card activity-card placeholder-card reveal"><div class="gallery-placeholder activity-placeholder activity-placeholder-2"><div class="activity-shape shape-one"></div><div class="activity-shape shape-two"></div><span class="activity-placeholder-mark">02<small>CAPTURE THE MOMENT</small></span></div><div class="gallery-info"><div><span class="gallery-category">DOCUMENTATION / UPCOMING</span><h4>Kegiatan 02</h4><p>Foto kegiatan, komunitas, workshop, atau event.</p></div></div></article><article class="gallery-card activity-card placeholder-card reveal"><div class="gallery-placeholder activity-placeholder activity-placeholder-3"><div class="activity-shape shape-one"></div><div class="activity-shape shape-two"></div><span class="activity-placeholder-mark">03<small>CAPTURE THE MOMENT</small></span></div><div class="gallery-info"><div><span class="gallery-category">DOCUMENTATION / UPCOMING</span><h4>Kegiatan 03</h4><p>Foto kegiatan, komunitas, workshop, atau event.</p></div></div></article>
+  </div>
+  <p class="gallery-note reveal"><svg class="icon"><use href="#i-image"/></svg> Galeri disiapkan untuk foto asli. Sertifikat dan kegiatan dapat diunggah melalui dashboard admin Django.</p>
+</div></section>
+
+<!-- JOURNEY -->
+<section class="section journey-section" id="journey"><div class="container"><div class="section-heading reveal"><div class="section-kicker"><span class="section-num">05 /</span> HOW I KEEP MOVING FORWARD</div><span class="small-plus">✳</span></div><div class="journey-layout"><div><h2 class="section-display reveal">Driven by<br><span class="gradient-italic">curiosity.</span></h2><p class="journey-intro reveal">Bagi saya, menjadi developer berarti terus bereksperimen, tidak berhenti belajar, dan berani membuat sesuatu yang berbeda.</p></div><div class="journey-list">
+  <div class="journey-row reveal"><span class="journey-icon">01</span><div><h3>Curiosity first</h3><p>Selalu ingin memahami cara kerja hal baru, bukan sekadar menyalin solusinya.</p></div><span class="journey-chevron">↗</span></div><div class="journey-row reveal"><span class="journey-icon">02</span><div><h3>Build with intention</h3><p>Setiap fitur punya alasan. Setiap desain punya tujuan.</p></div><span class="journey-chevron">↗</span></div><div class="journey-row reveal"><span class="journey-icon">03</span><div><h3>Keep evolving</h3><p>Belajar dari proyek nyata, memperbaiki detail, lalu melangkah lebih jauh.</p></div><span class="journey-chevron">↗</span></div>
+</div></div></div></section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact"><div class="contact-halo" aria-hidden="true"></div><div class="container"><div class="section-heading reveal"><div class="section-kicker"><span class="section-num">06 /</span> THE NEXT BIG THING STARTS HERE</div><span class="small-plus">✳</span></div><div class="contact-main"><div class="contact-left"><h2 class="contact-title reveal">HAVE AN<br>IDEA? <span class="gradient-italic">LET'S</span><br><span class="contact-outline">MAKE IT</span><br>REAL<span class="title-period">.</span></h2><p class="contact-subtitle reveal">Punya proyek, ide, atau sekadar ingin ngobrol soal teknologi? Saya selalu terbuka untuk percakapan menarik.</p><div class="contact-direct reveal"><a href="mailto:sendyahmad414@gmail.com" class="contact-email">sendyahmad414@gmail.com <svg class="icon"><use href="#i-arrow-up-right"/></svg></a><button type="button" class="copy-email" data-copy="sendyahmad414@gmail.com" aria-label="Salin email"><svg class="icon"><use href="#i-copy"/></svg></button></div><div class="contact-chips reveal"><span><svg class="icon"><use href="#i-map"/></svg> Samarinda, Indonesia</span><span><i class="dot-live"></i> Available for projects</span></div></div>
+      <div class="contact-form-card reveal"><div class="contact-form-top"><div><span class="form-overline">START A CONVERSATION</span><h3>Tell me about it<span> ✳</span></h3></div><span class="form-top-icon"><svg class="icon"><use href="#i-send"/></svg></span></div>
+        
+        <form class="contact-form" action="#contact" method="post" id="contactForm"><input type="hidden" name="csrfmiddlewaretoken" value="demo"><div class="honeypot"><label for="website">Biarkan kolom ini kosong</label><input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></div><div class="form-row"><label for="contactName">01 / YOUR NAME<input id="contactName" name="name" type="text" maxlength="120" minlength="2" autocomplete="name" placeholder="Nama kamu" required></label><label for="contactEmail">02 / EMAIL ADDRESS<input id="contactEmail" name="email" type="email" maxlength="254" autocomplete="email" placeholder="nama@email.com" required></label></div><label for="contactSubject">03 / WHAT'S ON YOUR MIND?<input id="contactSubject" type="text" name="subject" minlength="3" maxlength="160" placeholder="Diskusi proyek / Kolaborasi / Halo!" required></label><label for="contactMessage">04 / YOUR MESSAGE<textarea id="contactMessage" name="message" minlength="10" maxlength="5000" rows="4" placeholder="Ceritakan idemu di sini..." required></textarea></label><button class="btn btn-gradient form-submit magnetic" type="submit"><span>Send message</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></button><p class="form-disclaimer">Pesan akan disimpan di dashboard SenDev. Belum ada email otomatis.</p></form>
+      </div>
+    </div></div></section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-identity"><a href="#home" class="footer-logo">S<span>.</span> <small>SENDEV®</small></a><p>Built with logic. Designed with feeling.</p></div>
+        <div class="footer-links"><a href="#projects">Selected Work</a><a href="#gallery">Gallery</a><a href="#contact">Get In Touch</a></div>
+        <div class="footer-socials">
+          <a href="https://github.com/sendyahmad2323" target="_blank" rel="noopener noreferrer" aria-label="GitHub SenDev"><svg class="icon"><use href="#i-github"/></svg></a>
+          <a href="https://www.linkedin.com/in/sendy-ahmad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn SenDev"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+          <a href="https://www.instagram.com/seensen_y/" target="_blank" rel="noopener noreferrer" aria-label="Instagram SenDev"><svg class="icon"><use href="#i-instagram"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="footerYear">2026</span> SenDev. Made to stand out.</span><span>Crafted in Samarinda, Indonesia <span class="footer-asterisk">✳</span></span><a href="#home">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <dialog class="command-dialog" id="commandDialog" aria-label="Navigasi cepat">
+    <div class="command-header"><svg class="icon"><use href="#i-search"/></svg><input type="text" id="commandSearch" placeholder="Cari halaman atau ketik perintah..." aria-label="Cari navigasi"><button type="button" id="closeCommand" aria-label="Tutup"><svg class="icon"><use href="#i-x"/></svg></button></div>
+    <div class="command-list" id="commandList">
+      <button type="button" data-command="home"><span>01</span> Beranda <small>↵</small></button>
+      <button type="button" data-command="about"><span>02</span> Tentang saya <small>↵</small></button>
+      <button type="button" data-command="expertise"><span>03</span> Keahlian <small>↵</small></button>
+      <button type="button" data-command="projects"><span>04</span> Proyek <small>↵</small></button>
+      <button type="button" data-command="gallery"><span>05</span> Sertifikat & kegiatan <small>↵</small></button>
+      <button type="button" data-command="contact"><span>06</span> Hubungi saya <small>↵</small></button>
+    </div>
+    <div class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> navigasi</span><span><kbd>ESC</kbd> untuk menutup</span></div>
+  </dialog>
+
+  <dialog class="lightbox-dialog" id="lightboxDialog" aria-label="Pratinjau gambar"><button class="lightbox-close" type="button" id="closeLightbox" aria-label="Tutup pratinjau"><svg class="icon"><use href="#i-x"/></svg></button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script defer src="static/js/portfolio.js"></script>
+<script>document.getElementById('contactForm')?.addEventListener('submit',function(e){e.preventDefault();const t=document.getElementById('toast');t.textContent='Ini preview statis. Jalankan Django untuk menyimpan pesan.';t.classList.add('visible');setTimeout(()=>t.classList.remove('visible'),3200);});</script></body>
+</html>

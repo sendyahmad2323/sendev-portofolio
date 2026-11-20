@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080912">
+  <meta name="description" content="SenDev — Portofolio Sendy Ahmad. Full-Stack Developer yang menggabungkan clean engineering dan visual experience yang berani.">
+  <meta property="og:title" content="SenDev — Creative Developer Portfolio">
+  <meta property="og:description" content="Code that feels alive. Jelajahi karya, skill, sertifikat, dan perjalanan SenDev.">
+  <meta property="og:type" content="website">
+  <title>{% block title %}SenDev® — Code That Feels Alive{% endblock %}</title>
+  <link rel="icon" href="static/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/portfolio.css">
+</head>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16m-7-7 7 7 7-7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7h3v1m-3 2a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 17-5-5 5-5m8 0 5 5-5 5m-3-16-2 20"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="m6 8 4 4-4 4m6 0h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 6-10 6L2 9l10-6Zm-10 12 10 6 10-6M2 12l10 6 10-6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v4m6-4v4M9 19v4m6-4v4M19 9h4m-4 6h4M1 9h4m-4 6h4"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 2 2.1 7.9L22 12l-7.9 2.1L12 22l-2.1-7.9L2 12l7.9-2.1L12 2Zm7-1v4m-2-2h4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-7-7Z"/><path d="M13 2v7h7M8 14h8M8 18h6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m22 17-6-6L3 21"/></symbol>
+    <symbol id="i-command" viewBox="0 0 24 24"><path d="M9 7V5a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3v14a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V7Z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7ZM22 2 11 13"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-lightning" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-12h-7l0-8Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a17 17 0 0 1 0 20M12 2a17 17 0 0 0 0 20"/></symbol>
+  </svg>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="site-noise" aria-hidden="true"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-wrap container" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="SenDev, kembali ke beranda"><span class="brand-symbol">S<span class="brand-symbol-dot">.</span></span><span class="brand-text">SenDev<span class="brand-registered">®</span></span></a>
+      <div class="nav-panel" id="navPanel">
+        <a class="nav-link active" href="#home" data-nav="home">Home</a>
+        <a class="nav-link" href="#about" data-nav="about">About</a>
+        <a class="nav-link" href="#expertise" data-nav="expertise">Expertise</a>
+        <a class="nav-link" href="#projects" data-nav="projects">Work</a>
+        <a class="nav-link" href="#gallery" data-nav="gallery">Gallery</a>
+        <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="command-key" type="button" id="openCommand" aria-label="Buka navigasi cepat (Ctrl atau Command K)"><svg class="icon"><use href="#i-search"/></svg><span>⌘ K</span></button>
+        <a class="nav-cta" href="#contact"><span>Let's talk</span><svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Buka menu"><svg class="icon" id="menuIcon"><use href="#i-menu"/></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">{% block content %}{% endblock %}</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-identity"><a href="#home" class="footer-logo">S<span>.</span> <small>SENDEV®</small></a><p>Built with logic. Designed with feeling.</p></div>
+        <div class="footer-links"><a href="#projects">Selected Work</a><a href="#gallery">Gallery</a><a href="#contact">Get In Touch</a></div>
+        <div class="footer-socials">
+          {% if profile.github_url %}<a href="{{ profile.github_url }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub SenDev"><svg class="icon"><use href="#i-github"/></svg></a>{% endif %}
+          {% if profile.linkedin_url %}<a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn SenDev"><svg class="icon"><use href="#i-linkedin"/></svg></a>{% endif %}
+          {% if profile.instagram_url %}<a href="{{ profile.instagram_url }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram SenDev"><svg class="icon"><use href="#i-instagram"/></svg></a>{% endif %}
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="footerYear">2026</span> SenDev. Made to stand out.</span><span>Crafted in {{ profile.location }} <span class="footer-asterisk">✳</span></span><a href="#home">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <dialog class="command-dialog" id="commandDialog" aria-label="Navigasi cepat">
+    <div class="command-header"><svg class="icon"><use href="#i-search"/></svg><input type="text" id="commandSearch" placeholder="Cari halaman atau ketik perintah..." aria-label="Cari navigasi"><button type="button" id="closeCommand" aria-label="Tutup"><svg class="icon"><use href="#i-x"/></svg></button></div>
+    <div class="command-list" id="commandList">
+      <button type="button" data-command="home"><span>01</span> Beranda <small>↵</small></button>
+      <button type="button" data-command="about"><span>02</span> Tentang saya <small>↵</small></button>
+      <button type="button" data-command="expertise"><span>03</span> Keahlian <small>↵</small></button>
+      <button type="button" data-command="projects"><span>04</span> Proyek <small>↵</small></button>
+      <button type="button" data-command="gallery"><span>05</span> Sertifikat & kegiatan <small>↵</small></button>
+      <button type="button" data-command="contact"><span>06</span> Hubungi saya <small>↵</small></button>
+    </div>
+    <div class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> navigasi</span><span><kbd>ESC</kbd> untuk menutup</span></div>
+  </dialog>
+
+  <dialog class="lightbox-dialog" id="lightboxDialog" aria-label="Pratinjau gambar"><button class="lightbox-close" type="button" id="closeLightbox" aria-label="Tutup pratinjau"><svg class="icon"><use href="#i-x"/></svg></button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script defer src="static/js/portfolio.js"></script>
+</body>
+</html>
