@@ -26,18 +26,18 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'dev-only-change-me-before-depl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '0' if os.environ.get('VERCEL') else '1') == '1'
 
+# Always allow the canonical production domain, even when the Vercel env var is missing.
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "sendev-tech.vercel.app",
     "sendev-portofolio.vercel.app",
 ]
-
 ALLOWED_HOSTS += [
     host.strip()
     for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "").split(",")
     if host.strip()
 ]
+
 
 # Application definition
 
@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'portofolio.apps.PortofolioConfig'
 ]
 
@@ -149,7 +151,29 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / 'media'  # local-only fallback
+
+# Vercel's function filesystem is read-only. Use Cloudinary for Django Admin uploads.
+# Keep default media storage local on developer computers without CLOUDINARY_URL.
+STORAGES = {
+    'default': {
+        'BACKEND': (
+            'portofolio.storage.SenDevCloudinaryStorage'
+            if os.environ.get('CLOUDINARY_URL')
+            else 'django.core.files.storage.FileSystemStorage'
+        ),
+    },
+    'staticfiles': {
+        # Keep CSS/JS in the existing Vercel static asset setup.
+        'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
+    },
+}
+
+# Cloudinary API URLs must use HTTPS in the public website.
+if os.environ.get('CLOUDINARY_URL'):
+    import cloudinary
+    cloudinary.config(secure=True)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -158,15 +182,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # HTTPS and CSRF host configuration for production deployments.
 CSRF_TRUSTED_ORIGINS = [
-    "https://sendev-tech.vercel.app",
     "https://sendev-portofolio.vercel.app",
 ]
-
 CSRF_TRUSTED_ORIGINS += [
     origin.strip()
-    for origin in os.environ.get(
-        "DJANGO_CSRF_TRUSTED_ORIGINS", ""
-    ).split(",")
+    for origin in os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",")
     if origin.strip()
 ]
 SECURE_CONTENT_TYPE_NOSNIFF = True
