@@ -29,7 +29,6 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '0' if os.environ.get('VERCEL') else '1')
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "sendev-portofolio.vercel.app",
     "sendev.vercel.app",
 ]
 
@@ -158,7 +157,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # HTTPS and CSRF host configuration for production deployments.
 CSRF_TRUSTED_ORIGINS = [
-    "https://sendev-portofolio.vercel.app",
     "https://sendev.vercel.app",
 ]
 
