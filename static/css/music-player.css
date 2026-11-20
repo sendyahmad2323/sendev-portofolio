@@ -1,0 +1,36 @@
+/* SenDev Radio — floating player, scoped to .sendev-music */
+.sendev-music{--radio-cyan:#56e8fa;--radio-lime:#d5ff70;--radio-purple:#9c67ff;position:fixed;right:24px;bottom:24px;z-index:90;display:flex;align-items:center;gap:12px;width:min(380px,calc(100vw - 30px));min-height:92px;padding:14px 45px 14px 14px;border:1px solid rgba(179,149,255,.4);border-radius:20px;background:linear-gradient(125deg,rgba(23,18,48,.97),rgba(10,13,28,.97));box-shadow:0 14px 55px rgba(1,2,16,.65),0 0 28px rgba(148,92,255,.19);color:#f8f9ff;backdrop-filter:blur(16px);font-family:inherit}
+.sendev-music::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,rgba(156,103,255,.12),transparent 45%,rgba(86,232,250,.07))}
+.sendev-music__cover{width:56px;height:56px;border-radius:15px;flex:none;display:grid;place-items:center;background:linear-gradient(135deg,#7b3cff 4%,#3acdf1 100%);box-shadow:0 0 22px rgba(119,73,255,.35);color:#fff;position:relative}
+.sendev-music__cover svg{width:26px;height:26px}
+.sendev-music__info{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.sendev-music__overline{font:700 9px/1.4 'Space Mono',monospace;letter-spacing:.12em;color:var(--radio-cyan);display:flex;align-items:center;gap:9px}
+.sendev-music__title{font:700 15px/1.25 'Space Grotesk',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sendev-music__status{font-size:10px;color:#bbc0d5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sendev-music__volume{display:flex;align-items:center;gap:7px;margin-top:5px;color:#b2b1ce;font-size:10px}
+.sendev-music__volume input{width:100%;min-width:40px;accent-color:var(--radio-purple);cursor:pointer;height:13px}
+.sendev-music__volume output{font-size:10px;min-width:31px;text-align:right}
+.sendev-music__play{position:relative;flex:none;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:var(--radio-lime);color:#101224;box-shadow:0 0 22px rgba(213,255,112,.22);transition:transform .2s ease,box-shadow .2s ease;cursor:pointer}
+.sendev-music__play:hover{transform:scale(1.07);box-shadow:0 0 27px rgba(213,255,112,.6)}
+.sendev-music__play svg{width:20px;height:20px}
+.sendev-music__pause-icon{display:none}
+.sendev-music.is-playing .sendev-music__play-icon{display:none}
+.sendev-music.is-playing .sendev-music__pause-icon{display:block}
+.sendev-music__eq{display:flex;align-items:end;gap:2px;height:11px}
+.sendev-music__eq i{width:2px;height:4px;border-radius:5px;background:var(--radio-lime)}
+.sendev-music.is-playing .sendev-music__eq i{animation:sendev-wave .65s ease-in-out infinite alternate}
+.sendev-music.is-playing .sendev-music__eq i:nth-child(2){animation-delay:.15s}
+.sendev-music.is-playing .sendev-music__eq i:nth-child(3){animation-delay:.3s}
+.sendev-music.is-playing .sendev-music__eq i:nth-child(4){animation-delay:.1s}
+@keyframes sendev-wave{from{height:3px}to{height:11px}}
+.sendev-music__compact{position:absolute;right:10px;top:9px;border:0;background:transparent;color:#b8b4d4;display:grid;place-items:center;width:25px;height:25px;cursor:pointer}
+.sendev-music__compact svg{width:16px;height:16px;transition:transform .2s}
+.sendev-music.is-compact{width:auto;min-height:unset;padding:8px 42px 8px 8px;gap:8px;border-radius:16px}
+.sendev-music.is-compact .sendev-music__cover{width:39px;height:39px;border-radius:11px}
+.sendev-music.is-compact .sendev-music__cover svg{width:20px;height:20px}
+.sendev-music.is-compact .sendev-music__info{display:none}
+.sendev-music.is-compact .sendev-music__play{width:37px;height:37px}
+.sendev-music.is-compact .sendev-music__compact svg{transform:rotate(180deg)}
+.sendev-music button:focus-visible,.sendev-music input:focus-visible{outline:2px solid var(--radio-cyan);outline-offset:3px}
+@media(max-width:600px){.sendev-music{right:12px;bottom:12px;width:min(360px,calc(100vw - 24px))}.sendev-music__cover{width:45px;height:45px}.sendev-music__title{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.sendev-music.is-playing .sendev-music__eq i{animation:none}.sendev-music *{transition:none!important}}

@@ -1,0 +1,22 @@
+<!-- SenDev floating music player. The track must be supplied by the site owner. -->
+<aside class="sendev-music" id="sendevMusic" aria-label="Pemutar musik SenDev">
+  <audio id="sendevAudio" preload="none" loop>
+    <source src="/static/music/sendev-background.mp3" type="audio/mpeg">
+  </audio>
+  <div class="sendev-music__cover" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  </div>
+  <div class="sendev-music__info">
+    <span class="sendev-music__overline">SENDEV RADIO <span class="sendev-music__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span>
+    <strong class="sendev-music__title">Coding Vibes</strong>
+    <small class="sendev-music__status" id="sendevMusicStatus" role="status">Klik Play untuk mendengarkan</small>
+    <label class="sendev-music__volume"><span>Volume</span><input id="sendevMusicVolume" type="range" min="0" max="100" value="35" aria-label="Volume musik SenDev"><output id="sendevVolumeValue">35%</output></label>
+  </div>
+  <button class="sendev-music__play" id="sendevMusicPlay" type="button" aria-label="Putar musik" aria-pressed="false">
+    <svg class="sendev-music__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="sendev-music__pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+  </button>
+  <button class="sendev-music__compact" id="sendevMusicCompact" type="button" aria-label="Minimalkan pemutar musik" aria-expanded="true" title="Minimalkan / perluas pemutar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 10l5 5 5-5"/></svg>
+  </button>
+</aside>
